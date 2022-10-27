@@ -40,13 +40,15 @@ function mount(vnode, container) {
 
 /* 对比新旧VNode, 更新DOM节点 */
 function patch(vnode1, vnode2) {
+  // 取出之前vnode1生成的DOM节点
+  const el = vnode1.el
   if(vnode1.tag !== vnode2.tag){
     const parentEl = el.parentElement
     parentEl.removeChild(el)
     mount(vnode2, parentEl)
   }else{
-    // 1.取出之前vnode1生成的DOM节点, 并在vnode2中保存
-    const el = vnode2.el = vnode1.el
+    // 1.将DOM节点el在vnode2中保存
+    vnode2.el = el
 
     // 2.处理props
     const oldProps = vnode1.props || {}
