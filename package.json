@@ -1,0 +1,27 @@
+{
+  "name": "mini-vue-impl",
+  "version": "1.0.0",
+  "description": "A simple implementation of Vue.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhipingLi/Mini-Vue.git"
+  },
+  "keywords": [
+    "vue",
+    "mini-vue",
+    "vue impl",
+    "vue.js implementation",
+    "javascript framework"
+  ],
+  "author": "Zhiping Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZhipingLi/Mini-Vue/issues"
+  },
+  "homepage": "https://github.com/ZhipingLi/Mini-Vue#readme",
+  "type": "module"
+}

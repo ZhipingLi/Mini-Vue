@@ -3,7 +3,7 @@ import {
   watchEffect,
   h,
   createApp
-} from "./src/index.js"
+} from "../index.js"
 
 // 1.创建根组件
 const App = {

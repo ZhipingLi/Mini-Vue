@@ -1,3 +1,7 @@
+/**
+ * 响应式系统模块
+ */
+
 let activeFn = null
 const targetMap = new WeakMap()
 

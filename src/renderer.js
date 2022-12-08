@@ -1,3 +1,7 @@
+/**
+ * 渲染系统模块
+ */
+
 /* 返回VNode对象 */
 function h(tag, props, children) {
   return {
@@ -16,7 +20,7 @@ function mount(vnode, container) {
   if(vnode.props){
     for(const key in vnode.props){
       const value = vnode.props[key]
-      if(key.startsWith('on')){ // 时间监听
+      if(key.startsWith('on')){ // 事件监听
         el.addEventListener(key.slice(2).toLowerCase(), value)
       }else{
         el.setAttribute(key, value)
@@ -59,7 +63,7 @@ function patch(vnode1, vnode2) {
     for(const key in newProps){
       const oldValue = oldProps[key]
       const newValue = newProps[key]
-      if(key.startsWith('on')){ // 监听事件
+      if(key.startsWith('on')){ // 事件监听
         el.addEventListener(key.slice(2).toLowerCase(), newValue)
       }else{
         if(oldValue !== newValue){
@@ -70,7 +74,7 @@ function patch(vnode1, vnode2) {
 
     // 2.2.删除旧的props
     for(const key in oldProps){
-      if(key.startsWith('on')){ // 监听事件
+      if(key.startsWith('on')){ // 事件监听
         const oldValue = oldProps[key]
         el.removeEventListener(key.slice(2).toLowerCase(), oldValue)
       }else{

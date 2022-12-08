@@ -1,5 +1,9 @@
-import { reactive, watchEffect } from './reactivity.js'
-import { h, mount, patch } from './renderer.js'
+/**
+ * 应用程序入口模块
+ */
+
+import { watchEffect } from './reactivity.js'
+import { mount, patch } from './renderer.js'
 
 function createApp(rootComponent){
   return {
@@ -23,8 +27,5 @@ function createApp(rootComponent){
 }
 
 export {
-  reactive,
-  watchEffect,
-  h,
   createApp
 }
