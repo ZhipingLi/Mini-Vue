@@ -1,3 +1,4 @@
+/* 返回VNode对象 */
 function h(tag, props, children) {
   return {
     tag,
@@ -6,7 +7,7 @@ function h(tag, props, children) {
   }
 }
 
-/* vnode -> HTMLElement */
+/* VNode -> HTMLElement, 并挂载到DOM上 */
 function mount(vnode, container) {
   // 1.创建DOM节点, 并在vnode上保留el
   const el = vnode.el = document.createElement(vnode.tag)
@@ -92,7 +93,7 @@ function patch(vnode1, vnode2) {
         for(const child of newChildren){
           mount(child, el)
         }
-      }else{ // 3.2.1.oldChildren为一个数组
+      }else{ // 3.2.2.oldChildren为一个数组
         const commonLength = Math.min(oldChildren.length, newChildren.length)
         for(let i = 0; i <= commonLength - 1; i++){
           patch(oldChildren[i], newChildren[i])
