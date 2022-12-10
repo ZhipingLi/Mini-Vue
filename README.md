@@ -62,6 +62,6 @@ const app = createApp(App).mount("#app")
 
 ```
 
-![image](https://user-images.githubusercontent.com/89546528/206568128-20d8ece6-562d-4b35-84fb-189bc686be44.png)
+![demo](https://user-images.githubusercontent.com/89546528/206865724-8c024d0b-4051-4598-b893-4250ac1d2005.gif)
 
 Tips: example.html needs to be opened with Live Server.

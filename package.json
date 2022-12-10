@@ -1,6 +1,6 @@
 {
   "name": "mini-vue-impl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple implementation of Vue.js",
   "main": "index.js",
   "scripts": {
