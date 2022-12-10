@@ -62,6 +62,6 @@ const app = createApp(App).mount("#app")
 
 ```
 
-![](C:\Users\Michael\Desktop\demo.gif)
+![](demo.gif)
 
 Tips: example.html needs to be opened with Live Server.
